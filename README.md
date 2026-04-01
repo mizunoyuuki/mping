@@ -1,5 +1,9 @@
 RFC規格やunix-mannualをもとにicmpレイヤーの実装、pingの作成
 
+環境: MacBook Pro M2 / macOS Tahoe 26.3
+     Homebrew 5.1.3
+     Apple clang version 17.0.0 (clang-1700.6.3.2)
+     cmake version 4.3.1
 ```
 brew install cmake
 
