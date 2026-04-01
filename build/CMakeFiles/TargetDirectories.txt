@@ -1,0 +1,4 @@
+/Users/mizuno/study/ping/build/CMakeFiles/Main.dir
+/Users/mizuno/study/ping/build/CMakeFiles/test.dir
+/Users/mizuno/study/ping/build/CMakeFiles/edit_cache.dir
+/Users/mizuno/study/ping/build/CMakeFiles/rebuild_cache.dir
