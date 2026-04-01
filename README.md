@@ -1,0 +1,1 @@
+RFC規格やunix-mannualをもとにicmpレイヤーの実装、pingの作成

@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/mizuno/study/mping/main.c" "CMakeFiles/Main.dir/main.c.o" "gcc" "CMakeFiles/Main.dir/main.c.o.d"
+  "/Users/mizuno/study/mping/ping.c" "CMakeFiles/Ping.dir/ping.c.o" "gcc" "CMakeFiles/Ping.dir/ping.c.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

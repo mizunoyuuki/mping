@@ -1,0 +1,2 @@
+/usr/bin/ar qc libIcmp.a CMakeFiles/Icmp.dir/icmp.c.o
+/usr/bin/ranlib libIcmp.a

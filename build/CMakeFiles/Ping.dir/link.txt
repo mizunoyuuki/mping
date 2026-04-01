@@ -1,0 +1,2 @@
+/usr/bin/ar qc libPing.a CMakeFiles/Ping.dir/ping.c.o
+/usr/bin/ranlib libPing.a

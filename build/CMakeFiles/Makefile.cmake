@@ -7,7 +7,7 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
-  "/Users/mizuno/study/ping/CMakeLists.txt"
+  "/Users/mizuno/study/mping/CMakeLists.txt"
   "CMakeFiles/4.3.1/CMakeCCompiler.cmake"
   "CMakeFiles/4.3.1/CMakeSystem.cmake"
   "/opt/homebrew/share/cmake/Modules/CMakeCInformation.cmake"
@@ -49,4 +49,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/Main.dir/DependInfo.cmake"
+  "CMakeFiles/Icmp.dir/DependInfo.cmake"
+  "CMakeFiles/Ping.dir/DependInfo.cmake"
   )

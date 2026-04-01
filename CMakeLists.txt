@@ -1,8 +1,14 @@
+# CMakeの使い方メモ
+# TODO: ctestの使い方, mccに導入したい
 
 cmake_minimum_required(VERSION 3.10)  #　CMakeの最低バージョンをしてい
 
 project(StudyCmake VERSION 1.0 LANGUAGES C) # プロジェクトの名前とバージョン
 add_executable(Main main.c)               # 実行ファイルとソースファイル
+
+add_library(Icmp icmp.c) # ライブラリの追加
+add_library(Ping ping.c) # 静的ライブラリの追加
+target_link_libraries(Main PRIVATE Icmp Ping) # ライブラリのリンク
 
 # add_library(Lib lib.c) # ライブラリの追加
 # target_link_libraries(Mylib STATIC Lib) # ライブラリのリンク
@@ -21,7 +27,7 @@ add_executable(Main main.c)               # 実行ファイルとソースファ
 enable_testing()
 
 # テスト1: main の実行テスト（前と同じ）
-add_test(NAME run_main COMMAND Main)
+add_test(NAME run_main COMMAND Main "8.8.8.8")
 
 # テスト2: Cで書いた自作テスト
 # add_executable(test_calc test_calc.c)   # テスト用バイナリを作る

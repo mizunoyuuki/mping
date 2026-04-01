@@ -1,7 +1,7 @@
 {
 	"InstallScripts" : 
 	[
-		"/Users/mizuno/study/ping/build/cmake_install.cmake"
+		"/Users/mizuno/study/mping/build/cmake_install.cmake"
 	],
 	"Parallel" : false
 }

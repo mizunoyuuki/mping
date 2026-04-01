@@ -57,10 +57,10 @@ RM = /opt/homebrew/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/mizuno/study/ping
+CMAKE_SOURCE_DIR = /Users/mizuno/study/mping
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/mizuno/study/ping/build
+CMAKE_BINARY_DIR = /Users/mizuno/study/mping/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -97,9 +97,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mizuno/study/ping/build/CMakeFiles /Users/mizuno/study/ping/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mizuno/study/mping/build/CMakeFiles /Users/mizuno/study/mping/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mizuno/study/ping/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mizuno/study/mping/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -139,6 +139,56 @@ Main/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/build
 .PHONY : Main/fast
 
+#=============================================================================
+# Target rules for targets named Icmp
+
+# Build rule for target.
+Icmp: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Icmp
+.PHONY : Icmp
+
+# fast build rule for target.
+Icmp/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Icmp.dir/build.make CMakeFiles/Icmp.dir/build
+.PHONY : Icmp/fast
+
+#=============================================================================
+# Target rules for targets named Ping
+
+# Build rule for target.
+Ping: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Ping
+.PHONY : Ping
+
+# fast build rule for target.
+Ping/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Ping.dir/build.make CMakeFiles/Ping.dir/build
+.PHONY : Ping/fast
+
+icmp.o: icmp.c.o
+.PHONY : icmp.o
+
+# target to build an object file
+icmp.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Icmp.dir/build.make CMakeFiles/Icmp.dir/icmp.c.o
+.PHONY : icmp.c.o
+
+icmp.i: icmp.c.i
+.PHONY : icmp.i
+
+# target to preprocess a source file
+icmp.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Icmp.dir/build.make CMakeFiles/Icmp.dir/icmp.c.i
+.PHONY : icmp.c.i
+
+icmp.s: icmp.c.s
+.PHONY : icmp.s
+
+# target to generate assembly for a file
+icmp.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Icmp.dir/build.make CMakeFiles/Icmp.dir/icmp.c.s
+.PHONY : icmp.c.s
+
 main.o: main.c.o
 .PHONY : main.o
 
@@ -163,6 +213,30 @@ main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/main.c.s
 .PHONY : main.c.s
 
+ping.o: ping.c.o
+.PHONY : ping.o
+
+# target to build an object file
+ping.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Ping.dir/build.make CMakeFiles/Ping.dir/ping.c.o
+.PHONY : ping.c.o
+
+ping.i: ping.c.i
+.PHONY : ping.i
+
+# target to preprocess a source file
+ping.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Ping.dir/build.make CMakeFiles/Ping.dir/ping.c.i
+.PHONY : ping.c.i
+
+ping.s: ping.c.s
+.PHONY : ping.s
+
+# target to generate assembly for a file
+ping.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Ping.dir/build.make CMakeFiles/Ping.dir/ping.c.s
+.PHONY : ping.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -172,10 +246,18 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... Icmp"
 	@echo "... Main"
+	@echo "... Ping"
+	@echo "... icmp.o"
+	@echo "... icmp.i"
+	@echo "... icmp.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... ping.o"
+	@echo "... ping.i"
+	@echo "... ping.s"
 .PHONY : help
 
 
