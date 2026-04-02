@@ -22,7 +22,8 @@ int ping(char *p){
     //********* ipヘッダ *************
     //
     ip->version__ihl = 0x45; // version: 4, IHL: 5 (20 bytes)
-    ip->total_length = sizeof(IPHeader) + sizeof(ICMPHeader) + data_len;
+    uint16_t total_len = sizeof(IPHeader) + sizeof(ICMPHeader) + data_len;
+    ip->total_length = total_len;
     ip->time_to_live = 255;
     // ペイロードに入っているプロトコルを指定
     // ICMP: 1
@@ -59,7 +60,7 @@ int ping(char *p){
 
 
     char recv_buf[1024];
-    struct sockaddr src_addr;
+    struct sockaddr_in src_addr;
     socklen_t addr_len = sizeof(src_addr);
 
     int recv_bytes = recvfrom(sock_fd, recv_buf, sizeof(recv_buf), 0, (struct sockaddr *)&src_addr, &addr_len);
@@ -94,20 +95,33 @@ int create_socket(void){
 }
 
 
+uint16_t add_ones_complement(uint16_t sum, uint16_t val);
+
 uint16_t icmp_checksum(void *data, size_t len) {
-      uint16_t *buf = data;
-      uint32_t sum = 0;
+    uint16_t *buf = (uint16_t *)data;
+    uint16_t sum = 0;
 
-      while (len > 1) {
-          sum += *buf++;
-          len -= 2;
-      }
-      if (len == 1) {
-          sum += *(uint8_t *)buf;
-      }
+    while (len > 1) {
+        uint16_t val = *buf++;
 
-      sum = (sum >> 16) + (sum & 0xFFFF);
-      sum += (sum >> 16);
+        sum = add_ones_complement(sum, val);
+        len -= 2;
 
-      return ~sum;
-  }
+        if (len == 1) {
+            uint16_t val = *(uint16_t *)buf;
+            sum = add_ones_complement(sum, val);
+        }
+    }
+
+    return ~sum;
+
+
+}
+
+uint16_t add_ones_complement(uint16_t sum, uint16_t val){
+    if (sum > (uint16_t)(sum + val)){
+        return sum + val + 1;
+    } else {
+        return sum + val;
+    }
+}
