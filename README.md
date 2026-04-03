@@ -1,6 +1,6 @@
 RFC規格やunix-mannualをもとにicmpレイヤーの実装、pingの作成
 
-- MacBook Pro M2 / macOS Tahoe 26.3
+- MacBook Pro M2 / macOS Tahoe 26.3 || GCP-x8664 Ubuntu 22.04.5 LTS
 - Homebrew 5.1.3
 - Apple clang version 17.0.0 (clang-1700.6.3.2)
 - cmake version 4.3.1
