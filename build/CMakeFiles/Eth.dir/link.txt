@@ -1,0 +1,2 @@
+/usr/bin/ar qc libEth.a CMakeFiles/Eth.dir/eth.c.o
+/usr/bin/ranlib libEth.a

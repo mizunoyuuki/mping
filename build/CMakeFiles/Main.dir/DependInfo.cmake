@@ -8,15 +8,13 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/mizuno/study/mping/main.c" "CMakeFiles/Main.dir/main.c.o" "gcc" "CMakeFiles/Main.dir/main.c.o.d"
+  "/home/yuki0322mizuuri/mping/main.c" "CMakeFiles/Main.dir/main.c.o" "gcc" "CMakeFiles/Main.dir/main.c.o.d"
   )
 
-# Targets to which this target links which contain Fortran sources.
-set(CMAKE_Fortran_TARGET_LINKED_INFO_FILES
-  )
-
-# Targets to which this target links which contain Fortran sources.
-set(CMAKE_Fortran_TARGET_FORWARD_LINKED_INFO_FILES
+# Targets to which this target links.
+set(CMAKE_TARGET_LINKED_INFO_FILES
+  "/home/yuki0322mizuuri/mping/build/CMakeFiles/Ping.dir/DependInfo.cmake"
+  "/home/yuki0322mizuuri/mping/build/CMakeFiles/Eth.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

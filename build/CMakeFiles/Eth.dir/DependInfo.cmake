@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/yuki0322mizuuri/mping/icmp.c" "CMakeFiles/Icmp.dir/icmp.c.o" "gcc" "CMakeFiles/Icmp.dir/icmp.c.o.d"
+  "/home/yuki0322mizuuri/mping/eth.c" "CMakeFiles/Eth.dir/eth.c.o" "gcc" "CMakeFiles/Eth.dir/eth.c.o.d"
   )
 
 # Targets to which this target links.
