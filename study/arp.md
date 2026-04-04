@@ -55,3 +55,9 @@ ipをみて、外部のWANへデータを転送する。
 送り元MACを自分のMACアドレス、
 送り先のMACを送り先のMACにしてNICに書き込む、て感じ
 
+
+ip link show
+で確認できるのは、自分のMACアドレス。
+ip neigh show
+で確認でいるのは、
+
